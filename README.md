@@ -151,10 +151,11 @@ namespace School_System
             
 A:            Console.Clear();
             Console.Write("Choose and option");
-            Console.WriteLine("1. Register for your courses");
-            Console.WriteLine("Check fee balance");
-            Console.WriteLine("2. Pay Fees");
-            Console.WriteLine("3. Find out if you are liable for exams");
+            Console.WriteLine("1. Register students");
+            Console.WriteLine("2. Register for your courses");
+            Console.WriteLine("3. Check fee balance");
+            Console.WriteLine("4. Pay Fees");
+            Console.WriteLine("5. Find out if you are liable for exams");
             choice = Console.Read();
 
             switch (choice)
@@ -179,7 +180,7 @@ A:            Console.Clear();
                     Finance q = new Finance();
                     q.get_fees();
                     break;
-                case 6: 
+                 
                      
             }
 
