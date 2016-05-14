@@ -10,8 +10,10 @@ namespace School_System
         }
         public void get_studentdet()
         {
-
+            
         }
+
+        
     }
     class Course
     {
