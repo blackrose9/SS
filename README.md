@@ -180,8 +180,10 @@ A:            Console.Clear();
                     Finance q = new Finance();
                     q.get_fees();
                     break;
-                 
-                     
+                default:
+                    Console.WriteLine("You have entered an incorrect option! Try again.");
+                    Console.ReadLine();
+                    goto A; 
             }
 
 
