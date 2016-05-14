@@ -10,7 +10,30 @@ namespace School_System
         }
         public void get_studentdet()
         {
+        
+            int x;
             
+            Console.WriteLine("How many students do you want to register?");
+            x = Console.Read();
+            Console.WriteLine(" Please register your students");
+
+            string[] name = new string[x];
+            int[] admino = new int[x];
+            int[] year = new int[x];
+            for (int i = 0; i < x; i++ )
+            {
+                //enter student details
+                Console.WriteLine("Enter Student details");
+                Console.Write("Enter Name: ");
+                name[i] = Console.ReadLine();
+                Console.WriteLine("Enter Admission Number: ");
+                admino[i] = Console.Read();
+                Console.WriteLine("Enter Academic year of student: ");
+                year[i] = Console.Read();
+                Console.Write('\n');
+
+                Console.Read();
+            }
         }
 
         
@@ -123,32 +146,10 @@ namespace School_System
     {
         static void Main(string[] args)
         {
-            //variables for condition statements
-            int x, choice;
+            //variable for condition statements
+            int choice;
             
-            Console.WriteLine("How many students do you want to register?");
-            x = Console.Read();
-            Console.WriteLine(" Please register your students");
-
-            string[] name = new string[x];
-            int[] admino = new int[x];
-            int[] year = new int[x];
-            for (int i = 0; i < x; i++ )
-            {
-                //enter student details
-                Console.WriteLine("Enter Student details");
-                Console.Write("Enter Name: ");
-                name[i] = Console.ReadLine();
-                Console.WriteLine("Enter Admission Number: ");
-                admino[i] = Console.Read();
-                Console.WriteLine("Enter Academic year of student: ");
-                year[i] = Console.Read();
-                Console.Write('\n');
-
-                Console.Read();
-            }
-
-            Console.Clear();
+A:            Console.Clear();
             Console.Write("Choose and option");
             Console.WriteLine("1. Register for your courses");
             Console.WriteLine("Check fee balance");
@@ -159,22 +160,27 @@ namespace School_System
             switch (choice)
             {
                 case 1:
+                    Student s = new Student();
+                    s.get_studentdet();
+                    break;
+                case 2:
                     Course c = new Course();
                     c.get_courseName();
                     break;
-
-                case 2:
+                case 3:
                     Finance f = new Finance();
                     f.pay();
                     break;
-                case 3:
+                case 4:
                     Exam e = new Exam();
                     e.estatus();
                     break;
-                case 4:
+                case 5:
                     Finance q = new Finance();
                     q.get_fees();
                     break;
+                case 6: 
+                     
             }
 
 
